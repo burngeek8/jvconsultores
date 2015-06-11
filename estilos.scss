@@ -19,12 +19,12 @@ body
 
 	header
 	{
-		background-color: #fff;
+		
 		height: 70px;
-		box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-		position: fixed;
+		/**box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);*/
 		width: 100%;
 		top: 0;
+		z-index: 99;
 		
 		.logo
 		{
@@ -36,25 +36,47 @@ body
 			background-size: 100%;
 		}
 	}
+	.texto
+	{
+		color: #fff;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 100px;
+		margin: auto;
+		text-shadow: 3px 3px 5px $primaryTextColor;
+		h3
+		{
+			font-size: 2.5em;
+		}
+		p
+		{
+			font-size: 1.5em;
+		}
+	}
+	
 	.contenido
 	{
-		margin-top: 160px;
 
 		.bloque 
 		{
+			
 			h2
 			{
 				color: $secondaryTextColor;
 			}
 			article
 			{
-				border: 1px $dividerColor solid;
 				display: inline-block;
 				height: 250px;
 				margin: .5em .25em;
 				padding: .5em;
 				vertical-align: top;
 				width: 250px;
+
 				h3
 				{
 					font-size: .8em; 
@@ -64,9 +86,38 @@ body
 				}
 				img
 				{
-					width: 200px;
-					height: 200px;
+					width: 150px;
+					height: 150px;
 
+				}
+			}
+			.testimonio
+			{
+				padding: 1em;
+				background-color: #23B9D2;
+	
+				img
+				{
+					width: 150px;
+					height: 150px;
+					border-radius: 50%;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				p
+				{
+					display: inline-block;
+					width: 60%;
+					color: $textPrimaryColor;
+					text-align: left;
+					padding: 1em;
+					font-size: 1.2em;
+					vertical-align: middle;
+				}
+				.nombre
+				{
+					font-weight: bold;
+					text-align: right;
 				}
 			}
 		}
